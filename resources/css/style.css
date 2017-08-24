@@ -75,8 +75,15 @@ input {
   flex-direction: row;
   justify-content: flex-start;
   border-bottom: 1px solid lightgrey;
-
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
+
+.track:hover {
+  background-color: rgb(255, 0, 171);
+  color: white;
+}
+
 
 .column1, .column2 {
   display: flex;
@@ -97,6 +104,14 @@ img {
   align-self: center;
   height: 5rem;
   width: 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
 }
 
 .fa-play-circle-o {

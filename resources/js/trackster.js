@@ -1,6 +1,7 @@
 var Trackster = {};
 const API_KEY = "2c932bb7d57001451a6f847b8c7213d2";
 
+
 $(document).ready(function() {
   $(".search-btn").click(function() {
     Trackster.searchTracksByTitle($("#input").val());
@@ -11,19 +12,22 @@ Trackster.renderTracks = function(tracks) {
   var $music = $("#music");
   $music.empty();
 
+
+
   for (var i = 0; i < tracks.length; i++) {
     var track = tracks[i];
     var mediumAlbumArt = track.image[1]["#text"];
+    var artistWiki = track.artist;
     var htmlTrack =
         '<div class="track">' +
           '<div class="column1">' +
             '<a href="' + track.url + '" target="_blank">' + '<i class="fa fa-play-circle-o" aria-hidden="true"></i></a>' +
           '</div>' +
           '<div class="column1">' +
-            '<span id="Name">' + track.name + '</span>' +
+            '<span id="name">' + track.name + '</span>' +
           '</div>' +
           '<div class="column2">' +
-            '<span id="Artist">' + track.artist + '</span>' +
+            '<a href="https://en.wikipedia.org/wiki/' + artistWiki + '" target="_blank"><p id="artist">' + track.artist + '</p></a>' +
           '</div>' +
           '<div class="column2">' +
             '<img id="Artwork" src="' + mediumAlbumArt + '" alt="Artwork">' +
@@ -33,6 +37,7 @@ Trackster.renderTracks = function(tracks) {
           '</div>' +
         '</div>';
     $music.append(htmlTrack);
+
   }
 };
 
