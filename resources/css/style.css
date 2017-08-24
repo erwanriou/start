@@ -123,3 +123,29 @@ a:hover {
 }
 
 /* Media */
+
+@media only screen and (max-width: 860px) {
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .title {
+    padding: 1rem 0;
+  }
+  .research {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  input {
+    text-align: center;
+    width: 10rem;
+    padding: 0.8rem;
+  }
+  .fa-search {
+    margin-top: 2rem;
+  }
+  .column2 {
+    display: none;
+  }
+}
